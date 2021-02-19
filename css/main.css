@@ -29,6 +29,14 @@ a, a:hover, a:active, a:focus {
     padding: 0px 15px;
 }
 
+.general__title {
+    padding-top: 50px;
+    font-size: 40px;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
 /* Section Tabs 
 ==================================================================*/
 
@@ -41,14 +49,6 @@ a, a:hover, a:active, a:focus {
     max-width: 600px;
     margin: 0px auto;
     text-align: center;
-}
-
-.tabs__title {
-    padding-top: 150px;
-    font-size: 40px;
-    text-align: center;
-    color: #fff;
-    text-transform: uppercase;
 }
 
 .tabs__nav {
@@ -88,4 +88,71 @@ a, a:hover, a:active, a:focus {
 
 .tabs__item.active {
     display: block;
+}
+
+/* Section Slider 
+==================================================================*/
+.slider {
+    background: linear-gradient(21deg, #dd03e4, #5611ec);
+    height: 100vh;
+}
+
+.slider-wrap {
+    max-width: 60%;
+    margin: 0px auto;
+    text-align: center;
+    position: relative;
+    padding-top: 30px;
+}
+
+.slide img {
+    max-width: 100%;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+#btn-next, #btn-prev {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    height: 93.7%;
+    width: 6%;
+    background-color: rgb(90, 90, 90);
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+#btn-next {
+    left: auto;
+    right: 0;
+}
+
+.dots-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.dot.active {
+    background-color: #000000;
+}
+
+span {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(233, 210, 2); 
+    margin-right: 10px;
+    cursor: pointer;
+}
+span:last-child{
+    margin-right: 0;
 }
