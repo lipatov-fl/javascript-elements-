@@ -25,6 +25,19 @@ tabsBtn.forEach(function (item) {                                // Переби
     })
 });
 
+// Parallax
+
+function parallaxX(event) {
+    console.log(event)
+    this.querySelectorAll('.parralax__layer').forEach(layer => {
+        let speed = layer.getAttribute('data-speed');
+        layer.style.transform = `translateX(${(event.clientX * speed / 900)}px)`;
+    });
+}
+
+document.addEventListener('mousemove', parallaxX);
+
+
 // #2 Slider
 
 const prev = document.getElementById('btn-prev'),  // Создаем переменные в них записываем
