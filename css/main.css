@@ -2,7 +2,6 @@
 ===========================================*/
 
 body {
-    /* font-family: 'Big Shoulders Display', cursive; */
     font-family: 'Oswald', sans-serif;
     font-size: 14px;
 }
@@ -103,6 +102,7 @@ a, a:hover, a:active, a:focus {
     text-align: center;
     position: relative;
     padding-top: 30px;
+    height: 100%;
 }
 
 .slide img {

@@ -1,3 +1,5 @@
+// №1 Tabs
+
 const tabsBtn = document.querySelectorAll('.tabs__nav-btn');     // В переменную tabsBtn получаю кнопки
 const tabsItem = document.querySelectorAll('.tabs__item');       // В переменную tabsItem получаю элементы табов
 
@@ -22,3 +24,56 @@ tabsBtn.forEach(function (item) {                                // Переби
 
     })
 });
+
+// #2 Slider
+
+const prev = document.getElementById('btn-prev'),  // Создаем переменные в них записываем
+    next = document.getElementById('btn-next'),    // все элементы с которыми будем взаимодействовать
+    slides = document.querySelectorAll('.slide'),  // (вперед, назад, слайды, точки)
+    dots = document.querySelectorAll('.dot');
+
+let active = 0;                                    // Создаем переменную в которой содержиться активный нулевой img
+
+const activeSlide = n => {                         // Создаем функцию в качестве параметра передаем n
+    slides.forEach((item) => {                     // перебираем слайды
+        item.classList.remove('active');           // каждому элементу удаляем класс active       
+    })
+    slides[n].classList.add('active');             // и добавляем класс active
+}
+
+const activeDots = n => {                          // Аналогичную функцию создаем и для точек
+    dots.forEach((item) => {
+        item.classList.remove('active');
+    })
+    dots[n].classList.add('active');
+}
+
+next.addEventListener('click', () => {               // По нажатию next срабатывает функция:
+    if (active == slides.length - 1) {               // Если нулевой img совпадает с последним, то
+        active = 0;                                  // переключаем на первый
+    } else {                                         // или же переключаем вперед слайд
+        active++;
+    }
+    activeSlide(active);                             // Вставляем функции для слайдов и точек, для одновременного переключения
+    activeDots(active);
+    console.log(active);
+});
+
+prev.addEventListener('click', () => {               // По нажатию prev срабатывает функция:
+    if (active == 0) {                               // Если первый слайд равен нулю, то
+        active = slides.length - 1;                  // переключаем на последний
+    } else {
+        active--;                                    // или же переключаем слайд назад
+    }
+    activeSlide(active);                             // Вставляем функции для слайдов и точек, для одновременного переключения
+    activeDots(active);
+    console.log(active);
+});
+
+dots.forEach((item, index) => {                      // Перебираем точки, срабатывает функция
+    item.addEventListener('click', () => {           // по нажатию по элементу
+        active = index;                              // первый слайд = индексу
+        activeSlide(active);                         // Вставляем функции для слайдов и точек, для одновременного переключения
+        activeDots(active);
+    })
+})
