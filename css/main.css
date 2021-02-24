@@ -103,7 +103,7 @@ a, a:hover, a:active, a:focus {
     height: 100%;
 }
 
-.parallax__wrap {
+.parallax__tabs {
     position: relative;
     left: 0;
     right: 0;
@@ -126,7 +126,6 @@ a, a:hover, a:active, a:focus {
 /* Section Slider 
 ==================================================================*/
 .slider {
-    background: linear-gradient(21deg, #dd03e4, #5611ec);
     height: 100vh;
 }
 
@@ -189,4 +188,33 @@ span {
 }
 span:last-child{
     margin-right: 0;
+}
+
+/* Parallax effect */
+
+.parralax__layer-slider {
+    position: fixed;
+    left: -10%;
+    width: 110%;
+    height: 100%;
+}
+
+.parallax__slider {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 110%;
+}
+
+.parralax__layer-1 {
+    background:url(../img/parallax/futurama.jpg) no-repeat center center /cover;
+    z-index: -4;
+}
+
+.parralax__layer-2 {
+    background:url(../img/parallax/logo-futurama.png) right bottom no-repeat;
+    min-width: 100%;
+    z-index: -5;
 }
