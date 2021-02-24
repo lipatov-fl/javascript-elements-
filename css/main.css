@@ -96,7 +96,7 @@ a, a:hover, a:active, a:focus {
 /* Parallax effect */
 
 .parralax__layer {
-    position: fixed;
+    position: absolute;
     left: -10%;
     top: 0;
     width: 110%;
@@ -104,12 +104,11 @@ a, a:hover, a:active, a:focus {
 }
 
 .parallax__tabs {
-    position: relative;
+    position: static;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    width: 110%;
 }
 
 .layer-bg {
@@ -127,6 +126,7 @@ a, a:hover, a:active, a:focus {
 ==================================================================*/
 .slider {
     height: 100vh;
+    position: relative;
 }
 
 .slider-wrap {
@@ -175,14 +175,14 @@ a, a:hover, a:active, a:focus {
 }
 
 .dot.active {
-    background-color: #000000;
+    background-color: #edfd04;
 }
 
 span {
     width: 15px;
     height: 15px;
     border-radius: 50%;
-    background-color: rgb(233, 210, 2); 
+    background-color: rgb(15, 164, 250); 
     margin-right: 10px;
     cursor: pointer;
 }
@@ -193,14 +193,14 @@ span:last-child{
 /* Parallax effect */
 
 .parralax__layer-slider {
-    position: fixed;
+    position: absolute;
     left: -10%;
     width: 110%;
     height: 100%;
 }
 
 .parallax__slider {
-    position: relative;
+    position: static;
     left: 0;
     right: 0;
     top: 0;
@@ -210,11 +210,11 @@ span:last-child{
 
 .parralax__layer-1 {
     background:url(../img/parallax/futurama.jpg) no-repeat center center /cover;
-    z-index: -4;
+    z-index: -2;
 }
 
 .parralax__layer-2 {
-    background:url(../img/parallax/logo-futurama.png) right bottom no-repeat;
+    background:url(../img/parallax/ship.png) left bottom no-repeat;
     min-width: 100%;
-    z-index: -5;
+    z-index: -1;
 }
