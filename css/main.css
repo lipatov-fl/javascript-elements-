@@ -93,48 +93,41 @@ a, a:hover, a:active, a:focus {
     display: block;
 }
 
-/* Parallax effect */
+/* Parallax tabs */
 
-.parralax__layer {
+.parallax-tabs {
     position: absolute;
-    left: -10%;
     top: 0;
-    width: 110%;
-    height: 100%;
-}
-
-.parallax__tabs {
-    position: static;
     left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-}
-
-.layer-bg {
-    background:url(../img/parallax/Library.jpg) no-repeat center center /cover;
+    width: 100%;
+    height: 100%;
+ }
+  
+ .background-library {
+    background: url(../img/parallax/Library.jpg) center center no-repeat ;
+    background-size: cover;
     z-index: -2;
-}
-
-.layer-1 {
-    background:url(../img/parallax/bart.png) right bottom no-repeat;
-    min-width: 100%;
-    z-index: -1;
-}
+ }
+  
+ .background-bart {
+     background: url(../img/parallax/bart.png) center bottom no-repeat;
+     background-size: auto;
+     z-index: -1;
+     position: absolute;
+     top: 150px;
+ }
 
 /* Section Slider 
 ==================================================================*/
 .slider {
     height: 100vh;
-    position: relative;
 }
 
 .slider-wrap {
     max-width: 60%;
-    margin: 0px auto;
+    margin: 20px auto;
     text-align: center;
     position: relative;
-    padding-top: 30px;
     height: 100%;
 }
 
@@ -155,8 +148,8 @@ a, a:hover, a:active, a:focus {
 #btn-next, #btn-prev {
     position: absolute;
     left: 0;
-    top: 30px;
-    height: 93.7%;
+    top: 0;
+    height: 100%;
     width: 6%;
     background-color: rgb(90, 90, 90);
     opacity: 0.4;
@@ -190,31 +183,23 @@ span:last-child{
     margin-right: 0;
 }
 
-/* Parallax effect */
+/* Parallax slider */
 
-.parralax__layer-slider {
+.parallax-slider {
     position: absolute;
-    left: -10%;
-    width: 110%;
-    height: 100%;
-}
-
-.parallax__slider {
-    position: static;
     left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 110%;
-}
-
-.parralax__layer-1 {
-    background:url(../img/parallax/futurama.jpg) no-repeat center center /cover;
+    width: 100%;
+    height: 100%;
+ }
+  
+ .background-futurama {
+    background: url(../img/parallax/futurama.jpg) center center no-repeat;
+    background-size: cover;
     z-index: -2;
-}
-
-.parralax__layer-2 {
-    background:url(../img/parallax/ship.png) left bottom no-repeat;
-    min-width: 100%;
-    z-index: -1;
-}
+ }
+  
+ .background-ship {
+     background: url(../img/parallax/ship.png) left bottom no-repeat;
+     background-size: auto;
+     z-index: -1;
+ }

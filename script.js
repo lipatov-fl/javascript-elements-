@@ -25,17 +25,35 @@ tabsBtn.forEach(function (item) {                                // Переби
     })
 });
 
-// Parallax
+// Parallax tabs
 
-function parallaxX(event) {
-    console.log(event)
-    this.querySelectorAll('.parralax__layer').forEach(layer => {
-        let speed = layer.getAttribute('data-speed');
-        layer.style.transform = `translateX(${(event.clientX * speed / 900)}px)`;
-    });
+const bgBart = document.getElementById("background-bart");  //Получаем элемент фона
+
+//При движении мышью вызываем функцию, которая меняет положение фона
+document.addEventListener("mousemove", function (e) { MoveBackground(e); });
+
+function MoveBackground(e) {
+
+    let offsetBartX = (e.clientX / window.innerWidth * 300) - 15;
+    let offsetBartY = (e.clientY / window.innerHeight * 100) - 5;
+
+    bgBart.setAttribute("style", "background-position: " + offsetBartX + "px " + offsetBartY + "px"); // Меняем положение барта
 }
 
-document.addEventListener('mousemove', parallaxX);
+// Parallax slider
+
+const bgShip = document.getElementById("background-ship");  //Получаем элемент фона
+
+document.addEventListener("mousemove", function (n) { MoveBg(n); }); //При движении мышью вызываем функцию, которая меняет положение фона
+
+function MoveBg(n) {
+
+    let offsetShipX = (n.clientX / window.innerWidth * 1500) - 15;
+    let offsetShipY = (n.clientY / window.innerHeight * 500) - 5;
+
+
+    bgShip.setAttribute("style", "background-position: " + offsetShipX + "px " + offsetShipY + "px"); // Меняем положение корабля
+}
 
 
 // #2 Slider
